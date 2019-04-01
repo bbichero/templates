@@ -13,18 +13,18 @@
     "generate": "bearer generate"
   },
   "dependencies": {
-    "@bearer/core": "beta6",
-    "@bearer/functions": "beta6",
-    "@bearer/ui": "beta6",
+    "@bearer/core": "next",
+    "@bearer/functions": "next",
+    "@bearer/ui": "next",
     "axios": "^0.18.0"
   },
   "devDependencies": {
-    "@bearer/cli": "beta6",
-    "@bearer/js": "beta6",
+    "@bearer/cli": "next",
+    "@bearer/js": "next",
     "@types/node": "^10.12.25"
   },
   "peerDependencies": {
-    "@bearer/js": "beta6"
+    "@bearer/js": "next"
   },
   "license": "MIT"
 }
