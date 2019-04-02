@@ -1,11 +1,16 @@
 {
-  "authorizationURL": "https://example.com/authorizationUrl",
-  "tokenURL": "https://example.com/tokenUrl",
+  "authorizationURL": "https://app.hubspot.com/oauth/authorize",
+  "tokenURL": "https://api.hubapi.com/oauth/v1/token",
   "authType": "OAUTH2",
-  "tokenParams": {},
+  "tokenParams": {
+    "redirect_uri": "{{CALLBACK_URL_V2}}",
+    "grant_type": "authorization_code"
+  },
   "authorizationParams": {},
   "config": {
-    "scope": []
+    "callbackURL": "{{CALLBACK_URL_V2}}",
+    "response_type": "code",
+    "scope": ["contacts"]
   },
   "setupViews": [
     {
