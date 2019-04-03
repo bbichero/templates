@@ -1,0 +1,30 @@
+{
+  "name": "github",
+  "version": "0.0.1",
+  "description": "Github",
+  "main": "dist/index.js",
+  "types": "dist/types/components.d.ts",
+  "module": "dist/esm/index.js",
+  "collection": "dist/collection/collection-manifest.json",
+  "scripts": {
+    "push": "bearer push",
+    "start": "bearer start",
+    "invoke": "bearer invoke",
+    "generate": "bearer generate"
+  },
+  "dependencies": {
+    "@bearer/core": "next",
+    "@bearer/functions": "next",
+    "@bearer/ui": "next",
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "@bearer/cli": "next",
+    "@bearer/js": "next",
+    "@types/node": "^10.12.25"
+  },
+  "peerDependencies": {
+    "@bearer/js": "next"
+  },
+  "license": "MIT"
+}
