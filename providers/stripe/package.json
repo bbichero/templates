@@ -1,7 +1,7 @@
 {
-  "name": "github",
+  "name": "@bearer/template-stripe",
   "version": "0.0.1",
-  "description": "Github",
+  "description": "Stripe",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
   "module": "dist/esm/index.js",
@@ -13,18 +13,12 @@
     "generate": "bearer generate"
   },
   "dependencies": {
-    "@bearer/core": "next",
-    "@bearer/functions": "next",
-    "@bearer/ui": "next",
+    "@bearer/functions": "^0.110.0",
     "axios": "^0.18.0"
   },
   "devDependencies": {
-    "@bearer/cli": "next",
-    "@bearer/js": "next",
+    "@bearer/cli": "^0.110.0",
     "@types/node": "^10.12.25"
-  },
-  "peerDependencies": {
-    "@bearer/js": "next"
   },
   "license": "MIT"
 }
