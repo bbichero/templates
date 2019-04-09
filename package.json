@@ -1,7 +1,16 @@
 {
+  "private": true,
+  "scripts": {
+    "start": "lerna exec --parallel 'yarn start -f'"
+  },
   "devDependencies": {
     "lerna": "^3.13.1"
   },
   "name": "templates",
-  "license": "MIT"
+  "license": "MIT",
+  "workspaces": {
+    "packages": [
+      "providers/*"
+    ]
+  }
 }
