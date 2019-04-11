@@ -1,0 +1,15 @@
+{
+  "authorizationURL": "https://app.asana.com/-/oauth_authorize",
+  "tokenURL": "https://app.asana.com/-/oauth_token",
+  "authType": "OAUTH2",
+  "tokenParams": {
+    "redirect_uri": "{{CALLBACK_URL_V2}}",
+    "grant_type": "authorization_code"
+  },
+  "authorizationParams": {},
+  "config": {
+    "callbackURL": "{{CALLBACK_URL_V2}}",
+    "response_type": "code",
+    "scope": [""]
+  }
+}
