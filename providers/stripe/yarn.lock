@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@bearer/template-pagerduty@0.0.1":
+"@bearer/template-stripe@0.0.1":
   version "0.0.1"
   dependencies:
     "@bearer/functions" next

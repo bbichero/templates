@@ -1,7 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "start": "lerna exec --parallel 'yarn start -f'"
+    "start": "lerna exec --parallel 'yarn start -f'",
+    "postinstall": "lerna exec -- 'yarn generate-lock-entry > yarn.lock '"
   },
   "devDependencies": {
     "lerna": "^3.13.1"
@@ -11,6 +12,7 @@
   "workspaces": {
     "packages": [
       "providers/*"
-    ]
+    ],
+    "hoistDependencies": true
   }
 }
