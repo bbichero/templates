@@ -1,5 +1,5 @@
 /**
- * This function returns authenticated user files stored on Google Drive.
+ * This function returns all files for the authenticated user.
  *
  * @context {string} accessToken
  * @return {File[]} data
