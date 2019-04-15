@@ -1,10 +1,15 @@
 {
-  "authorizationURL": "https://example.com/authorizationUrl",
-  "tokenURL": "https://example.com/tokenUrl",
+  "authorizationURL": "https://app.hubspot.com/oauth/authorize",
+  "tokenURL": "https://api.hubapi.com/oauth/v1/token",
   "authType": "OAUTH2",
-  "tokenParams": {},
+  "tokenParams": {
+    "redirect_uri": "https://int.staging.bearer.sh/v2/auth/callback",
+    "grant_type": "authorization_code"
+  },
   "authorizationParams": {},
   "config": {
-    "scope": []
+    "callbackURL": "https://int.staging.bearer.sh/v2/auth/callback",
+    "response_type": "code",
+    "scope": ["contacts"]
   }
 }
