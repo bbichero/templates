@@ -13,11 +13,11 @@
     "generate": "bearer generate"
   },
   "dependencies": {
-    "@bearer/functions": "beta6",
-    "axios": "^0.18.0"
+    "@bearer/functions": "0.114.1",
+    "oauth": "^0.9.15"
   },
   "devDependencies": {
-    "@bearer/cli": "beta6",
+    "@bearer/cli": "rc",
     "@types/node": "^10.12.25"
   },
   "license": "MIT"

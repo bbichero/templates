@@ -14,10 +14,10 @@
   },
   "dependencies": {
     "@bearer/functions": "0.114.1",
-    "axios": "^0.18.0"
+    "oauth": "^0.9.15"
   },
   "devDependencies": {
-    "@bearer/cli": "0.114.2",
+    "@bearer/cli": "rc",
     "@types/node": "^10.12.25"
   },
   "license": "MIT"

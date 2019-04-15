@@ -1,5 +1,5 @@
 {
-  "name": "@bearer/template-stripe",
+  "name": "stripe",
   "version": "0.0.1",
   "description": "Stripe",
   "main": "dist/index.js",
@@ -13,11 +13,11 @@
     "generate": "bearer generate"
   },
   "dependencies": {
-    "@bearer/functions": "next",
-    "axios": "^0.18.0"
+    "@bearer/functions": "0.114.1",
+    "oauth": "^0.9.15"
   },
   "devDependencies": {
-    "@bearer/cli": "next",
+    "@bearer/cli": "rc",
     "@types/node": "^10.12.25"
   },
   "license": "MIT"

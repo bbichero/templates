@@ -1,6 +1,6 @@
 {
-  "authorizationURL": "https://app.hubspot.com/oauth/authorize",
-  "tokenURL": "https://api.hubapi.com/oauth/v1/token",
+  "authorizationURL": "https://api.typeform.com/oauth/authorize",
+  "tokenURL": "https://api.typeform.com/oauth/token",
   "authType": "OAUTH2",
   "tokenParams": {
     "redirect_uri": "{{CALLBACK_URL_V2}}",
@@ -8,8 +8,8 @@
   },
   "authorizationParams": {},
   "config": {
+    "scope": ["forms:read"],
     "callbackURL": "{{CALLBACK_URL_V2}}",
-    "response_type": "code",
-    "scope": ["contacts"]
+    "response_type": "code"
   }
 }

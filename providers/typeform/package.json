@@ -1,7 +1,7 @@
 {
-  "name": "hubspot",
+  "name": "typeform",
   "version": "0.0.1",
-  "description": "Hubspot",
+  "description": "Typeform",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
   "module": "dist/esm/index.js",
