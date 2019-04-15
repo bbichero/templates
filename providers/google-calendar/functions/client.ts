@@ -4,7 +4,7 @@ export default function(token: string) {
   const headers = {
     Accept: 'application/json',
     'User-Agent': 'Bearer',
-    'Content-Type:': 'application/json',
+    'Content-Type': 'application/json',
     Authorization: `Bearer ${token}`
   }
 

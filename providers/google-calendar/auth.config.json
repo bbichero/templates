@@ -3,12 +3,12 @@
   "tokenURL": "https://www.googleapis.com/oauth2/v4/token",
   "authType": "OAUTH2",
   "tokenParams": {
-    "redirect_uri": "{{CALLBACK_URL_V2}}",
+    "redirect_uri": "https://int.staging.bearer.sh/v2/auth/callback",
     "grant_type": "authorization_code"
   },
   "authorizationParams": {},
   "config": {
-    "callbackURL": "{{CALLBACK_URL_V2}}",
+    "callbackURL": "https://int.staging.bearer.sh/v2/auth/callback",
     "response_type": "code",
     "scope": ["https://www.googleapis.com/auth/calendar"]
   }
