@@ -15,7 +15,7 @@ export default class DefaultFunctionFunction extends FetchData
       const token = event.context.authAccess.accessToken
       const dropbox = Client(token)
 
-      const { data } = await dropbox.post('files/list_folder', { path: '/' })
+      const { data } = await dropbox.post('files/list_folder', { path: '' })
 
       const files = (data.entries || []).map(file => {
         return {
