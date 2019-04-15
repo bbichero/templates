@@ -7,17 +7,5 @@
   "config": {
     "accessType": "offline",
     "scope": ["repo"]
-  },
-  "setupViews": [
-    {
-      "type": "text",
-      "label": "Client ID",
-      "controlName": "clientID"
-    },
-    {
-      "type": "password",
-      "label": "Client Secret",
-      "controlName": "clientSecret"
-    }
-  ]
+  }
 }
