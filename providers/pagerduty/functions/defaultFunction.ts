@@ -18,7 +18,7 @@ export default class FirstFunctionFunction extends FetchData
 
       return { data: response.data.incidents }
     } catch (error) {
-      return { error: 'An error has occured, ' + error.toString() }
+      return error.response ? { error: JSON.stringify(error.response.data) } : { error: error.toString() }
     }
   }
 

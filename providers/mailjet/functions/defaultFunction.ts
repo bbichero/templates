@@ -39,8 +39,8 @@ export default class FirstFunctionFunction extends FetchData
         ]
       })
       return { data: secondRequest.data }
-    } catch (err) {
-      console.error(err)
+    } catch (error) {
+      return error.response ? { error: JSON.stringify(error.response.data) } : { error: error.toString() }
     }
   }
 
