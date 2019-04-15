@@ -14,9 +14,17 @@ export default class FirstFunctionFunction extends FetchData
     try {
       const apiKey = event.context.authAccess.apiKey
       const client = Client(apiKey)
-      const response = await client.get('/incidents')
+      const { data } = await client.get('/incidents')
 
-      return { data: response.data.incidents }
+      const incidents = (data.incidents || []).map(incident => {
+        return {
+          id: incident.incident_number,
+          title: incident.title,
+          description: incident.description,
+          data: incident.created_at
+        }
+      })
+      return { data: incidents }
     } catch (error) {
       return error.response ? { error: JSON.stringify(error.response.data) } : { error: error.toString() }
     }
