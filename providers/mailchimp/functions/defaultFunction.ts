@@ -1,26 +1,50 @@
-import { TAPIKEYAuthContext, FetchData, TFetchActionEvent, TFetchPromise } from '@bearer/functions'
-// Uncomment the line below to use the API Client
-// import Client from './client'
+/**
+ * This function lists the boards that the authenticated user is a member of.
+ *
+ * @context {string} apiKey
+ * @return {Campaigns[]} data
+ */
 
-export default class DefaultFunctionFunction extends FetchData implements FetchData<ReturnedData, any, TAPIKEYAuthContext> {
+import { TAPIKEYAuthContext, FetchData, TFetchActionEvent, TFetchPromise } from '@bearer/functions'
+import Client from './client'
+
+export default class DefaultFunctionFunction extends FetchData
+  implements FetchData<ReturnedData, any, TAPIKEYAuthContext> {
   async action(event: TFetchActionEvent<Params, TAPIKEYAuthContext>): TFetchPromise<ReturnedData> {
-    // const token = event.context.authAccess.apiKey
-    // Put your logic here
-    return { data: [] }
+    try {
+      const { apiKey } = event.context.authAccess
+
+      const mailchimp = Client(apiKey)
+      const { data } = await mailchimp.get('/campaigns')
+
+      const campaigns = (data || []).map(campaign => {
+        return {
+          id: campaign.id,
+          subject: campaign.settings.subject_line,
+          counter: campaign.emails_sent
+        }
+      })
+      return { data: campaigns }
+    } catch (error) {
+      console.error(error)
+      return error
+    }
   }
 
-  // Uncomment the line below to restrict the function to be called only from a server-side context
-  // static serverSideRestricted = true
-
+  // Uncomment the line above if you don't want your function to be called from the frontend
+  // static backendOnly = true
 }
 
 /**
  * Typing
  */
-export type Params = {
-  // name: string
+
+export type Params = {}
+
+export type Campaigns = {
+  id: string
+  subject: string
+  counter: number
 }
 
-export type ReturnedData = {
-  // foo: string[]
-}
+export type ReturnedData = Campaigns[]

@@ -1,26 +1,57 @@
-import { TOAUTH2AuthContext, FetchData, TFetchActionEvent, TFetchPromise } from '@bearer/functions'
-// Uncomment the line below to use the API Client
-// import Client from './client'
+/**
+ * This function returns information about the authenticated user.
+ *
+ * @context {string} accessToken
+ * @return {User} data
+ */
 
-export default class DefaultFunctionFunction extends FetchData implements FetchData<ReturnedData, any, TOAUTH2AuthContext> {
+import { TOAUTH2AuthContext, FetchData, TFetchActionEvent, TFetchPromise } from '@bearer/functions'
+import Client from './client'
+
+export default class DefaultFunctionFunction extends FetchData
+  implements FetchData<ReturnedData, any, TOAUTH2AuthContext> {
   async action(event: TFetchActionEvent<Params, TOAUTH2AuthContext>): TFetchPromise<ReturnedData> {
-    // const token = event.context.authAccess.accessToken
-    // Put your logic here
-    return { data: [] }
+    try {
+      const token = event.context.authAccess.accessToken
+      const asana = Client(token)
+      const { data } = await asana.get('/users/me')
+
+      const user = {
+        id: data.data.id,
+        name: data.data.name,
+        email: data.data.email,
+        workspaces: (data.data.workspaces || []).map(workspace => {
+          return {
+            id: workspace.id,
+            name: workspace.name
+          }
+        })
+      }
+
+      return { data: user }
+    } catch (error) {
+      return error.response ? { error: JSON.stringify(error.response.data) } : { error: error.toString() }
+    }
   }
 
   // Uncomment the line below to restrict the function to be called only from a server-side context
   // static serverSideRestricted = true
-
 }
 
 /**
  * Typing
  */
-export type Params = {
-  // name: string
+export type Params = {}
+export type ReturnedData = AsanaUser
+
+export type AsanaUser = {
+  id: string
+  name: string
+  email: string
+  workspaces: AsanaWorkspace[]
 }
 
-export type ReturnedData = {
-  // foo: string[]
+export type AsanaWorkspace = {
+  id: string
+  name: string
 }
