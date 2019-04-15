@@ -14,9 +14,19 @@ export default class FirstFunctionFunction extends FetchData
     try {
       const apiKey = event.context.authAccess.apiKey
       const client = Client(apiKey)
-      const response = await client.get('/charges')
+      const { data } = await client.get('/charges')
 
-      return { data: response.data.data }
+      const charges = (data.data || []).map(charge => {
+        return {
+          id: charge.id,
+          amount: charge.amount,
+          created: charge.created,
+          currency: charge.currency,
+          paid: charge.paid
+        }
+      })
+
+      return { data: charges }
     } catch (error) {
       return error.response ? { error: JSON.stringify(error.response.data) } : { error: error.toString() }
     }
@@ -29,8 +39,13 @@ export default class FirstFunctionFunction extends FetchData
 /**
  * Typing
  */
-export type Params = never
+export type Params = {}
 
-export type ReturnedData = {
-  data: any[]
+type StripeCharges = {
+  id: string
+  amount: number
+  created: number
+  paid: boolean
 }
+
+export type ReturnedData = StripeCharges[]
