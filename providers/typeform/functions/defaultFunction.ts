@@ -20,7 +20,7 @@ export default class DefaultFunctionFunction extends FetchData
         return {
           id: form.id,
           title: form.title,
-          url: form.self.href
+          url: form._links.display
         }
       })
 
