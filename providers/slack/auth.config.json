@@ -1,0 +1,17 @@
+{
+  "authorizationURL": "https://slack.com/oauth/authorize",
+  "tokenURL": "https://slack.com/api/oauth.access",
+  "authType": "OAUTH2",
+  "authorizationParams": {
+    "access_type": "offline",
+    "consent": true
+  },
+  "tokenParams": {
+    "redirect_uri": "{{CALLBACK_URL_V2}}"
+  },
+  "config": {
+    "accessType": "offline",
+    "callbackURL": "{{CALLBACK_URL_V2}}",
+    "scope": ["reminders:write"]
+  }
+}

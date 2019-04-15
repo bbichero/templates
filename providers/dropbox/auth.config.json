@@ -1,6 +1,6 @@
 {
-  "authorizationURL": "https://app.hubspot.com/oauth/authorize",
-  "tokenURL": "https://api.hubapi.com/oauth/v1/token",
+  "authorizationURL": "https://www.dropbox.com/oauth2/authorize",
+  "tokenURL": "https://api.dropboxapi.com/oauth2/token",
   "authType": "OAUTH2",
   "tokenParams": {
     "redirect_uri": "{{CALLBACK_URL_V2}}",
@@ -9,7 +9,6 @@
   "authorizationParams": {},
   "config": {
     "callbackURL": "{{CALLBACK_URL_V2}}",
-    "response_type": "code",
-    "scope": ["contacts"]
+    "response_type": "code"
   }
 }
