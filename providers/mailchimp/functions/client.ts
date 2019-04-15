@@ -6,8 +6,10 @@ export default function(apikey: string, datacenter?: string) {
     'User-Agent': 'Bearer'
   }
 
+  const dc = datacenter ? datacenter : apikey.split('-').pop()
+
   return axios.create({
-    baseURL: `https://${datacenter || 'us1'}.api.mailchimp.com/3.0/`,
+    baseURL: `https://${dc || 'us1'}.api.mailchimp.com/3.0/`,
     timeout: 5000,
     auth: { username: 'anystring', password: apikey },
     headers

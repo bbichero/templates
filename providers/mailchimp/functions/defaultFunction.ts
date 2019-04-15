@@ -17,7 +17,7 @@ export default class DefaultFunctionFunction extends FetchData
       const mailchimp = Client(apiKey)
       const { data } = await mailchimp.get('/campaigns')
 
-      const campaigns = (data || []).map(campaign => {
+      const campaigns = (data.campaigns || []).map(campaign => {
         return {
           id: campaign.id,
           subject: campaign.settings.subject_line,
