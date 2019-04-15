@@ -10,6 +10,6 @@
   "config": {
     "callbackURL": "https://int.staging.bearer.sh/v2/auth/callback",
     "response_type": "code",
-    "scope": ["https://www.googleapis.com/auth/calendar"]
+    "scope": ["https://www.googleapis.com/auth/calendar.readonly"]
   }
 }
