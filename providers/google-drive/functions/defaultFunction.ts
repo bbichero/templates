@@ -50,3 +50,51 @@ export type File = {
   name: string
   mimeType: string
 }
+
+/**
+ * Sample data: list of main species of bears.
+ * Source: Wikipedia - https://en.wikipedia.org/wiki/List_of_bears
+ */
+
+const SampleBearSpecies = [
+  {
+    name: 'American black bear',
+    native: 'North America',
+    wikipedia: 'https://en.wikipedia.org/wiki/American_black_bear'
+  },
+  {
+    name: 'Asian black bear',
+    native: 'Southeast Asia',
+    wikipedia: 'https://en.wikipedia.org/wiki/Asian_black_bear'
+  },
+  {
+    name: 'Brown bear',
+    native: 'Asia, Europe and North America',
+    wikipedia: 'https://en.wikipedia.org/wiki/Brown_bear'
+  },
+  {
+    name: 'Giant panda',
+    native: 'South central China',
+    wikipedia: 'https://en.wikipedia.org/wiki/Giant_panda'
+  },
+  {
+    name: 'Sloth bear',
+    native: '',
+    wikipedia: 'https://en.wikipedia.org/wiki/Sloth_bear'
+  },
+  {
+    name: 'Sun bear',
+    native: '',
+    wikipedia: 'https://en.wikipedia.org/wiki/Sun_bear'
+  },
+  {
+    name: 'Polar bear',
+    native: '',
+    wikipedia: 'https://en.wikipedia.org/wiki/Polar_bear'
+  },
+  {
+    name: 'Spectacled bear',
+    native: '',
+    wikipedia: 'https://en.wikipedia.org/wiki/Spectacled_bear'
+  }
+]
