@@ -30,8 +30,7 @@ export default class DefaultFunctionFunction extends FetchData
 
       return { data: user }
     } catch (error) {
-      console.error(error)
-      return error
+      return error.response ? { error: JSON.stringify(error.response.data) } : { error: error.toString() }
     }
   }
 
