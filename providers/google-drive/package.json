@@ -13,8 +13,7 @@
     "generate": "bearer generate"
   },
   "dependencies": {
-    "@bearer/functions": "0.114.1",
-    "oauth": "^0.9.15"
+    "@bearer/functions": "0.114.1"
   },
   "devDependencies": {
     "@bearer/cli": "rc",

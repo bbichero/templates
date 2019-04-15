@@ -2,45 +2,6 @@
 # yarn lockfile v1
 
 
-"@bearer/bearer-cli@^0.111.0":
-  version "0.111.0"
-  resolved "https://registry.yarnpkg.com/@bearer/bearer-cli/-/bearer-cli-0.111.0.tgz#13ec129dfafcf3eb5171be16b18d0cd6111578b7"
-  integrity sha512-M2ircgN+YbCb05XCedXDQQDmzWcRzeSPgPWSSVlq97vQXuuJRWO0elDUHiXIFkbLW+67TimmwndBUuouE1w8SQ==
-  dependencies:
-    "@bearer/functions" "^0.111.0"
-    "@bearer/logger" "^0.111.0"
-    "@bearer/transpiler" "^0.111.0"
-    "@bearer/types" "^0.111.0"
-    "@koa/cors" "^2.2.2"
-    amazon-cognito-identity-js "^2.0.3"
-    aws-sdk "^2.224.1"
-    axios "^0.18.0"
-    chokidar "^2.0.4"
-    commander "^2.17.1"
-    del "^3.0.0"
-    find-up "^2.1.0"
-    fs-extra "^6.0.1"
-    get-port "^4.2.0"
-    globby "^8.0.1"
-    graceful-fs "^4.1.11"
-    ini "^1.3.5"
-    jsonc-parser "^2.1.0"
-    knex "^0.15.2"
-    koa "^2.5.2"
-    koa-bodyparser "^4.2.1"
-    koa-cookie "^1.0.0"
-    koa-logger "^3.2.0"
-    koa-respond "^1.0.1"
-    koa-router "^7.4.0"
-    rc "^1.2.7"
-    request "^2.85.0"
-    sqlite3 "^4.0.2"
-    terminal-kit "^1.15.1"
-    ts-loader "^4.4.1"
-    typescript "^3.4.1"
-    uuid "^3.3.2"
-    webpack "^4.29.6"
-
 "@bearer/bearer-cli@^0.114.1":
   version "0.114.1"
   resolved "https://registry.npmjs.org/@bearer/bearer-cli/-/bearer-cli-0.114.1.tgz#4ed8c47836dca99885267bce825f120ea1c1da97"
@@ -81,10 +42,10 @@
     uuid "^3.3.2"
     webpack "^4.29.6"
 
-"@bearer/cli@0.114.2":
-  version "0.114.2"
-  resolved "https://registry.npmjs.org/@bearer/cli/-/cli-0.114.2.tgz#f3badfc6c2db6c596b72dd9612856dec8ae8251f"
-  integrity sha512-IlJMFPTk6Qd5n7lfUD+fkQVIzLuwRnPISbr2ex+Ur516DOvswxJXbLFjYvvaJFMDm1DDu112DJ+CmzTndn15gg==
+"@bearer/cli@rc":
+  version "0.114.4"
+  resolved "https://registry.yarnpkg.com/@bearer/cli/-/cli-0.114.4.tgz#620e1685424b30bc85cb107ff6517692b3057029"
+  integrity sha512-b0F2RZ++dTb5qXu/ZNN8pwRROjIS86IDZD3msdfLZp61iQ2GVOjt7EZT48qRr4P9xtrrkoQDgMTXYsSzQBWldQ==
   dependencies:
     "@bearer/bearer-cli" "^0.114.1"
     "@bearer/functions" "^0.114.1"
@@ -128,52 +89,6 @@
     typescript-json-schema "^0.34.0"
     webpack "^4.29.6"
 
-"@bearer/cli@next":
-  version "0.111.0"
-  resolved "https://registry.yarnpkg.com/@bearer/cli/-/cli-0.111.0.tgz#380753948ff1936293583d05b1f5347adb348779"
-  integrity sha512-xcgQCR4tvxqXLkBfQGP/aRX/Kl5qinUJTTSbJC3aeKZH0PNURksE7KkSE/OdTGy9jEynEcjuR0SCjMNPkEn3qA==
-  dependencies:
-    "@bearer/bearer-cli" "^0.111.0"
-    "@bearer/functions" "^0.111.0"
-    "@bearer/openapi-generator" "^0.111.0"
-    "@bearer/security" "^0.111.0"
-    "@bearer/transpiler" "^0.111.0"
-    "@bearer/types" "^0.111.0"
-    "@oclif/command" "^1.5.12"
-    "@oclif/config" "^1.12.12"
-    "@oclif/plugin-autocomplete" "^0.1.0"
-    "@oclif/plugin-help" "^2.1.6"
-    "@oclif/plugin-not-found" "^1.2.1"
-    "@oclif/plugin-update" "^1.3.3"
-    "@oclif/plugin-warn-if-update-available" "^1.7.0"
-    axios "^0.18.0"
-    case "^1.5.5"
-    chokidar "^2.0.4"
-    cli-ux "^5.2.1"
-    colors "^1.3.1"
-    commander "^2.19.0"
-    copy-template-dir "^1.4.0"
-    find-up "^3.0.0"
-    fs "^0.0.1-security"
-    fs-extra "^7.0.0"
-    get-port "^4.2.0"
-    globby "^8.0.1"
-    ini "^1.3.5"
-    inquirer "^6.2.2"
-    inquirer-prompt-suggest "^0.1.0"
-    jsonc-parser "^2.1.0"
-    listr "^0.14.2"
-    lodash.set "^4.3.2"
-    open "^6.0.0"
-    os "^0.1.1"
-    path "^0.12.7"
-    rc "^1.2.8"
-    sqlite3 "^4.0.2"
-    ts-loader "^5.3.3"
-    tslib "^1"
-    typescript-json-schema "^0.34.0"
-    webpack "^4.29.6"
-
 "@bearer/functions@0.114.1", "@bearer/functions@^0.114.1":
   version "0.114.1"
   resolved "https://registry.npmjs.org/@bearer/functions/-/functions-0.114.1.tgz#ba0acc9cf1facb8f2bb8ee2bd82730ee273a7646"
@@ -183,36 +98,12 @@
     "@bearer/x-ray" "^0.114.1"
     axios "^0.18.0"
 
-"@bearer/functions@^0.111.0", "@bearer/functions@next":
-  version "0.111.0"
-  resolved "https://registry.yarnpkg.com/@bearer/functions/-/functions-0.111.0.tgz#61516f347afcd40fb0c137b82c201701f74470b7"
-  integrity sha512-20XiDaZSxHJj9QpfXlNzdG+nLU/roqXk3XI8nitUm9SwOrJqUqq7ZwQSkZWc8IqfN390KJ8q88pMTaxP/fP4Sg==
-  dependencies:
-    "@bearer/logger" "^0.111.0"
-    "@bearer/x-ray" "^0.111.0"
-    axios "^0.18.0"
-
-"@bearer/logger@^0.111.0":
-  version "0.111.0"
-  resolved "https://registry.yarnpkg.com/@bearer/logger/-/logger-0.111.0.tgz#f5906b8e9d8f1df3b5fa420f5b52f1289081b68b"
-  integrity sha512-HUf2pTJps49+CL65bdyXy9MWaLQnU2gXetWCV3UQHtskKnUChxRwEVt6ua3IYq785GGqTV7QR6ADKW9C2ox5zw==
-  dependencies:
-    debug "^4.1.0"
-
 "@bearer/logger@^0.114.1":
   version "0.114.1"
   resolved "https://registry.npmjs.org/@bearer/logger/-/logger-0.114.1.tgz#a4decd990bb139018ec0efe6bfba9e94fe0e089f"
   integrity sha512-kl8AK7WJDW5LwZzwtvscUNsMfhW4YrYZjLj/aMKYKk9vAr9ycorVnCd7Qe4/HrIAQ3KnAdhLj2g6unkIHsW1Ng==
   dependencies:
     debug "^4.1.0"
-
-"@bearer/openapi-generator@^0.111.0":
-  version "0.111.0"
-  resolved "https://registry.yarnpkg.com/@bearer/openapi-generator/-/openapi-generator-0.111.0.tgz#2074a94d0c18e9d35c4376b927680799206220b4"
-  integrity sha512-Su1GyU2MmiUWeMkaZDIofldHbE6FY9jTtYkvXTbJZUMG+lK4J9odfeJHJFQGUwwSRxhtzaazKY2V8ARRs5u/hw==
-  dependencies:
-    "@bearer/functions" "^0.111.0"
-    lodash.merge "^4.6.1"
 
 "@bearer/openapi-generator@^0.114.1":
   version "0.114.1"
@@ -222,28 +113,10 @@
     "@bearer/functions" "^0.114.1"
     lodash.merge "^4.6.1"
 
-"@bearer/security@^0.111.0":
-  version "0.111.0"
-  resolved "https://registry.yarnpkg.com/@bearer/security/-/security-0.111.0.tgz#83aaa9177039ef085cbe262aef1cc5b534803ac4"
-  integrity sha512-1dlE/NESOEmXlT/U7GJQ3+kNVBHEozrVnu+bWBfP61gP0bwSjL6fLVvEk2hOZjAVzLFd1PE0ViNaCxw9JkuDtA==
-
 "@bearer/security@^0.114.1":
   version "0.114.1"
   resolved "https://registry.npmjs.org/@bearer/security/-/security-0.114.1.tgz#27d8ef72bc0ea65444016a56cf405a5513c81240"
   integrity sha512-90Ia9ASrG8RG4joGDwQ6c7JBqaueptc7gp11Xc6JAqoT2o4QS6WJ4DjHr33vHz5JawSQEGcRQXU32hn+Y49JWg==
-
-"@bearer/transpiler@^0.111.0":
-  version "0.111.0"
-  resolved "https://registry.yarnpkg.com/@bearer/transpiler/-/transpiler-0.111.0.tgz#fbe8ffde6cb1b46db5e5de868a06304082aed594"
-  integrity sha512-tzGdJ/4U5WtWwkOVHVDEoIfV2V0/OGTXkeIv+JnVMxnSlsW1hoStGo/rEVkW+WyLrO7E3vb6+kmA1IcTT1nnXg==
-  dependencies:
-    "@bearer/logger" "^0.111.0"
-    async-foreach "^0.1.3"
-    case "^1.5.5"
-    command-line-args "^5.0.2"
-    fs-extra "^6.0.1"
-    typescript "^3.4.1"
-    typescript-json-schema "^0.34.0"
 
 "@bearer/transpiler@^0.114.1":
   version "0.114.1"
@@ -258,23 +131,10 @@
     typescript "^3.4.1"
     typescript-json-schema "^0.34.0"
 
-"@bearer/types@^0.111.0":
-  version "0.111.0"
-  resolved "https://registry.yarnpkg.com/@bearer/types/-/types-0.111.0.tgz#981c6fd998571bd683fffd738b0a080dfe71706f"
-  integrity sha512-5K0rnTJhdt8TDZp0HfI1/UioHcgylo5xB3dHM4O9X4WniiZCbBwSKdSTmFHH5Wu9nRl18J2UX5PCWPOKF6tDBg==
-
 "@bearer/types@^0.114.1":
   version "0.114.1"
   resolved "https://registry.npmjs.org/@bearer/types/-/types-0.114.1.tgz#05625ef32ac7dc7e5809519561cc35e5c1e5318b"
   integrity sha512-JWqpdn5EWg/xfMqz3rQBI9ZTom1nJTey/apVZgnfTrLr2BGR3oDPSq+MEvVXKT+K7dQtK8bqPaOXRxFjnOk3Sg==
-
-"@bearer/x-ray@^0.111.0":
-  version "0.111.0"
-  resolved "https://registry.yarnpkg.com/@bearer/x-ray/-/x-ray-0.111.0.tgz#5bac2220f00f0515863e36176a592bd829fedad5"
-  integrity sha512-9v6J587sHpyzZc1IlvW0J3cNvBN/Uxgj223Y7DcCOgi4XuUECVicrPzTQLyCbB8souStR5E0WmiKxqXkNlb6SA==
-  dependencies:
-    "@bearer/logger" "^0.111.0"
-    uuid "^3.3.2"
 
 "@bearer/x-ray@^0.114.1":
   version "0.114.1"
@@ -5481,6 +5341,11 @@ oauth-sign@~0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
   integrity sha512-fexhUFFPTGV8ybAtSIGbV6gOkSv8UtRbDBnAyLQw4QPKkgNlsH2ByPGtMUqdWkos6YCRmAqViwgZrJc/mRDzZQ==
+
+oauth@^0.9.15:
+  version "0.9.15"
+  resolved "https://registry.yarnpkg.com/oauth/-/oauth-0.9.15.tgz#bd1fefaf686c96b75475aed5196412ff60cfb9c1"
+  integrity sha1-vR/vr2hslrdUda7VGWQS/2DPucE=
 
 object-assign@^4.0.1, object-assign@^4.1.0:
   version "4.1.1"
