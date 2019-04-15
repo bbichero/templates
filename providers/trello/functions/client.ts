@@ -7,7 +7,7 @@ export default function(key: string, token: string) {
   }
 
   return axios.create({
-    baseURL: 'https://api.hubapi.com',
+    baseURL: 'https://api.trello.com/1/',
     timeout: 5000,
     headers,
     params: {
