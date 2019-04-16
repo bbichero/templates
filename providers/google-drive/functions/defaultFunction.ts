@@ -28,7 +28,7 @@ export default class DefaultFunctionFunction extends FetchData
       })
       return { data: files }
     } catch (error) {
-      return error.response ? { error: JSON.stringify(error.response.data) } : { error: error.toString() }
+      return { error: error.response ? error.response.data : error.toString() }
     }
   }
 
