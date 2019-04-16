@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-google-calendar@0.0.1:
+docusign@0.0.1:
   version "0.0.1"
   dependencies:
     "@bearer/functions" "0.114.1"
