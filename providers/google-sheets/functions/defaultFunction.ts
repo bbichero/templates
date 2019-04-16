@@ -1,3 +1,10 @@
+/**
+ * This function returns first rows and columns of a Google Spreadsheet.
+ *
+ * @context {string} accessToken
+ * @return {Bear[]} data
+ */
+
 import { TOAUTH2AuthContext, FetchData, TFetchActionEvent, TFetchPromise } from '@bearer/functions'
 import Client from './client'
 
@@ -6,16 +13,19 @@ export default class DefaultFunctionFunction extends FetchData
   async action(event: TFetchActionEvent<Params, TOAUTH2AuthContext>): TFetchPromise<ReturnedData> {
     try {
       const spreadsheetId = event.params.id || '1oB6jDTYUb8_UznDhhL5RQ083Z5zn4RacuUma22_8byQ'
-      const client = Client(event.context.authAccess.accessToken)
       const range = event.params.range || 'A2:D9'
+      
+      const client = Client(event.context.authAccess.accessToken)
+      
       const { data } = await client.get(`${spreadsheetId}/values/${range}`)
-      return {
-        data: data.values.map(row => ({
+      
+      const rows = (data.values || []).map(row => ({
           name: row[0],
           region: row[1],
           population: row[2].match('N/A') ? undefined : parseInt(row[2], 10)
         }))
-      }
+      
+      return { data: rows }
     } catch (error) {
       return { error: error.response ? error.response.data : error.toString() }
     }
@@ -28,8 +38,8 @@ export default class DefaultFunctionFunction extends FetchData
 /**
  * Typing
  */
+
 export type Params = {
-  // name: string
   id?: string
   range?: string
 }
