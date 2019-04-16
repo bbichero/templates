@@ -10,6 +10,7 @@ export default function(token: string) {
 
   return axios.create({
     // use https://account.docusign.com/ on production
+    // (also change the auth.config.json file when going prod)
     baseURL: 'https://account-d.docusign.com/',
     timeout: 5000,
     headers
