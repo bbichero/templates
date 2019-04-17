@@ -3,7 +3,7 @@
   "tokenURL": "https://auth.atlassian.com/oauth/token",
   "authType": "OAUTH2",
   "tokenParams": {
-    "redirect_uri": "https://int.staging.bearer.sh/v2/auth/callback",
+    "redirect_uri": "https://int.bearer.sh/v2/auth/callback",
     "grant_type": "authorization_code"
   },
   "authorizationParams": {
@@ -12,7 +12,7 @@
     "audience": "api.atlassian.com"
   },
   "config": {
-    "callbackURL": "https://int.staging.bearer.sh/v2/auth/callback",
+    "callbackURL": "https://int.bearer.sh/v2/auth/callback",
     "response_type": "code",
     "scope": ["read:jira-work"]
   }
