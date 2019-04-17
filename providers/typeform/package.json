@@ -13,7 +13,7 @@
     "generate": "bearer generate"
   },
   "dependencies": {
-    "@bearer/functions": "0.114.1"
+    "@bearer/functions": "latest"
   },
   "devDependencies": {
     "@bearer/cli": "latest",
