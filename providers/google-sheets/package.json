@@ -13,10 +13,10 @@
     "generate": "bearer generate"
   },
   "dependencies": {
-    "@bearer/functions": "rc"
+    "@bearer/functions": "latest"
   },
   "devDependencies": {
-    "@bearer/cli": "rc",
+    "@bearer/cli": "latest",
     "@types/node": "^10.12.25"
   },
   "license": "MIT"

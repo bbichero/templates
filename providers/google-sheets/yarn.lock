@@ -5,5 +5,5 @@
 google-sheets@0.0.1:
   version "0.0.1"
   dependencies:
-    "@bearer/functions" rc
+    "@bearer/functions" latest
 

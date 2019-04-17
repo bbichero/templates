@@ -16,7 +16,7 @@
     "@bearer/functions": "0.114.1"
   },
   "devDependencies": {
-    "@bearer/cli": "rc",
+    "@bearer/cli": "^1.0.2",
     "@types/node": "^10.12.25"
   },
   "license": "MIT"
