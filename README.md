@@ -19,7 +19,7 @@ With the [Bearer](https://www.bearer.sh/?utm_source=github&utm_campaign=template
 
 ## Templates
 
-Explore all templates available on Bearer [explore page](https://www?be.rer.sh/integrations/).
+Explore all templates available on Bearer [explore page](https://www.bearer.sh/integrations/).
 
 ## Usage
 
