@@ -13,7 +13,7 @@ export default class DefaultFunctionFunction extends FetchData
   implements FetchData<ReturnedData, any, TOAUTH2AuthContext> {
   async action(event: TFetchActionEvent<Params, TOAUTH2AuthContext>): TFetchPromise<ReturnedData> {
     try {
-      const token = event.context.authAccess.accessToken
+      const token = event.context.auth.accessToken
 
       const text = event.params.text || `Don't forget to bring your 🐻!`
       const time = event.params.time || 'in 2 seconds'

@@ -1,7 +1,7 @@
 /**
  * This function returns a list of charges you've previously created.
  *
- * @context event.context.authAccess.apiKey
+ * @context event.context.auth.apiKey
  * @returns Charges[]
  */
 
@@ -12,7 +12,7 @@ export default class FirstFunctionFunction extends FetchData
   implements FetchData<ReturnedData, any, TAPIKEYAuthContext> {
   async action(event: TFetchActionEvent<Params, TAPIKEYAuthContext>): TFetchPromise<ReturnedData> {
     try {
-      const apiKey = event.context.authAccess.apiKey
+      const apiKey = event.context.auth.apiKey
       const client = Client(apiKey)
       const { data } = await client.get('/charges')
 

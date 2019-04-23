@@ -13,7 +13,7 @@ export default class FirstFunctionFunction extends FetchData
   implements FetchData<ReturnedData, any, TBASICAuthContext> {
   async action(event: TFetchActionEvent<Params, TBASICAuthContext>): TFetchPromise<ReturnedData> {
     try {
-      const { username, password } = event.context.authAccess
+      const { username, password } = event.context.auth
       const client = Client(username, password)
 
       // Start by retrieving authorized sender list

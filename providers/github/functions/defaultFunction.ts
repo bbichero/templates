@@ -1,7 +1,7 @@
 /**
  * This function lists authenticated user repositories
  *
- * @context authAccess
+ * @context auth
  * @returns Repository[]
  */
 
@@ -12,7 +12,7 @@ export default class FirstFunctionFunction extends FetchData
   implements FetchData<ReturnedData, any, TOAUTH2AuthContext> {
   async action(event: TFetchActionEvent<Params, TOAUTH2AuthContext>): TFetchPromise<ReturnedData> {
     try {
-      const token = event.context.authAccess.accessToken
+      const token = event.context.auth.accessToken
       const github = Client(token)
       const { data } = await github.get('/user/repos')
 

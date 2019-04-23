@@ -12,7 +12,7 @@ export default class DefaultFunctionFunction extends FetchData
   implements FetchData<ReturnedData, any, TOAUTH2AuthContext> {
   async action(event: TFetchActionEvent<Params, TOAUTH2AuthContext>): TFetchPromise<ReturnedData> {
     try {
-      const token = event.context.authAccess.accessToken
+      const token = event.context.auth.accessToken
       const domain = 'https://your-domain.atlassian.net/'
 
       const jira = Client(domain, token)

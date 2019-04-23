@@ -12,7 +12,7 @@ export default class FirstFunctionFunction extends FetchData
   implements FetchData<ReturnedData, any, TOAUTH2AuthContext> {
   async action(event: TFetchActionEvent<Params, TOAUTH2AuthContext>): TFetchPromise<ReturnedData> {
     try {
-      const token = event.context.authAccess.accessToken
+      const token = event.context.auth.accessToken
       const hubspot = Client(token)
       const { data } = await hubspot.get('/contacts/v1/lists/all/contacts/all')
 

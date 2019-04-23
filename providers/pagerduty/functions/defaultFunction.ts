@@ -1,7 +1,7 @@
 /**
  * This function lists the latest incidents (problems or issues) associated with the authenticated account.
  *
- * @context event.context.authAccess.apiKey: string
+ * @context event.context.auth.apiKey: string
  * @returns Incidents[]
  */
 
@@ -12,7 +12,7 @@ export default class FirstFunctionFunction extends FetchData
   implements FetchData<ReturnedData, any, TAPIKEYAuthContext> {
   async action(event: TFetchActionEvent<Params, TAPIKEYAuthContext>): TFetchPromise<ReturnedData> {
     try {
-      const apiKey = event.context.authAccess.apiKey
+      const apiKey = event.context.auth.apiKey
       const client = Client(apiKey)
       const { data } = await client.get('/incidents')
 

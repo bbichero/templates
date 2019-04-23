@@ -14,8 +14,8 @@ export default class DefaultFunctionFunction extends FetchData
   async action(event: TFetchActionEvent<Params, TOAUTH1AuthContext>): TFetchPromise<ReturnedData> {
     try {
       // @ts-ignore
-      const appkey = event.context.authAccess.consumerKey
-      const token = event.context.authAccess.accessToken
+      const appkey = event.context.auth.consumerKey
+      const token = event.context.auth.accessToken
 
       const trello = Client(appkey, token)
       const { data } = await trello.get('/members/me/boards')

@@ -15,7 +15,7 @@ export default class DefaultFunctionFunction extends FetchData
       const spreadsheetId = event.params.id || '1oB6jDTYUb8_UznDhhL5RQ083Z5zn4RacuUma22_8byQ'
       const range = event.params.range || 'A2:D9'
       
-      const client = Client(event.context.authAccess.accessToken)
+      const client = Client(event.context.auth.accessToken)
       
       const { data } = await client.get(`${spreadsheetId}/values/${range}`)
       

@@ -12,7 +12,7 @@ export default class DefaultFunctionFunction extends FetchData
   implements FetchData<ReturnedData, any, TOAUTH2AuthContext> {
   async action(event: TFetchActionEvent<Params, TOAUTH2AuthContext>): TFetchPromise<ReturnedData> {
     try {
-      const token = event.context.authAccess.accessToken
+      const token = event.context.auth.accessToken
       const docusign = Client(token)
 
       const { data } = await docusign.get('/oauth/userinfo ')

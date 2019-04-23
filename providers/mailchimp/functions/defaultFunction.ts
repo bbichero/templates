@@ -12,7 +12,7 @@ export default class DefaultFunctionFunction extends FetchData
   implements FetchData<ReturnedData, any, TAPIKEYAuthContext> {
   async action(event: TFetchActionEvent<Params, TAPIKEYAuthContext>): TFetchPromise<ReturnedData> {
     try {
-      const { apiKey } = event.context.authAccess
+      const { apiKey } = event.context.auth
 
       const mailchimp = Client(apiKey)
       const { data } = await mailchimp.get('/campaigns')
