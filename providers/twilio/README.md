@@ -114,8 +114,8 @@ If you dive deeper, you'll see that:
 2. This template includes a pre-configured API client to query Twilio API:
 
    ```typescript
-   const twilio = await Client(username, password)
-   const { data } = twilio.get('/Messages.json')
+   const twilio = Client(username, password)
+   const { data } = await twilio.get('/Messages.json')
    ```
 
    The API client is configured in `functions/client.ts`
