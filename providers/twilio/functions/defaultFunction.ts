@@ -8,22 +8,24 @@
 import { TBASICAuthContext, FetchData, TFetchActionEvent, TFetchPromise } from '@bearer/functions'
 import Client from './client'
 
-export default class DefaultFunctionFunction extends FetchData implements FetchData<ReturnedData, any, TBASICAuthContext>{
+export default class DefaultFunctionFunction extends FetchData
+  implements FetchData<ReturnedData, any, TBASICAuthContext> {
   async action(event: TFetchActionEvent<Params, TBASICAuthContext>): TFetchPromise<ReturnedData> {
     try {
       const { username, password } = event.context.auth
 
-      const { data } = await Client(username, password).get('/Messages.json')
+      const twilio = Client(username, password)
+      const { data } = await twilio.get('/Messages.json')
 
       const messages = (data.messages || []).map(message => {
-          return {
-              sid: message.sid,
-              date_sent: message.date_sent,
-              to: message.to,
-              from: message.from,
-              body: message.body
-          }
-      });
+        return {
+          sid: message.sid,
+          date_sent: message.date_sent,
+          to: message.to,
+          from: message.from,
+          body: message.body
+        }
+      })
 
       return { data: messages }
     } catch (error) {
@@ -43,9 +45,9 @@ export type Params = {}
 export type ReturnedData = TwilioMessage[]
 
 export type TwilioMessage = {
-    sid: string
-    date_sent: string
-    to: string
-    from: string
-    body: string
+  sid: string
+  date_sent: string
+  to: string
+  from: string
+  body: string
 }
