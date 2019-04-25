@@ -82,8 +82,8 @@ export default class DefaultFunctionFunction extends FetchData
     try {
       const { username, password } = event.context.auth
 
-      const twilio = await Client(username, password)
-      const { data } = twilio.get('/Messages.json')
+      const twilio = Client(username, password)
+      const { data } = await twilio.get('/Messages.json')
 
       const messages = (data.messages || []).map(message => {
         return {
