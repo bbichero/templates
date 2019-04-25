@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "start": "lerna exec --parallel 'yarn start -f'",
-    "postinstall": "lerna exec -- 'yarn generate-lock-entry > yarn.lock '"
+    "postinstall": "lerna exec -- 'yarn generate-lock-entry > yarn.lock '",
+    "bearer-upgrade": "rm -rf yarn.lock  providers/*/yarn.lock && yarn install --force && yarn postinstall "
   },
   "devDependencies": {
     "lerna": "^3.13.1"
