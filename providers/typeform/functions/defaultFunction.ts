@@ -2,7 +2,7 @@
  * This function lists all your forms from Typeform.
  *
  * @context ACCESS_TOKEN
- * @returns Contact[]
+ * @returns Form[]
  */
 
 import { TOAUTH2AuthContext, FetchData, TFetchActionEvent, TFetchPromise } from '@bearer/functions'
