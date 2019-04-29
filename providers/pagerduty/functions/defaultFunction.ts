@@ -21,7 +21,7 @@ export default class FirstFunctionFunction extends FetchData
           id: incident.incident_number,
           title: incident.title,
           description: incident.description,
-          data: incident.created_at
+          date: incident.created_at
         }
       })
       return { data: incidents }
@@ -40,6 +40,11 @@ export default class FirstFunctionFunction extends FetchData
 
 export type Params = never
 
-export type ReturnedData = {
-  data: []
+type Incident = {
+  id: string
+  title: string
+  description: string
+  date: string
 }
+
+export type ReturnedData = Incident[]
