@@ -19,7 +19,7 @@ export default class DefaultFunctionFunction extends FetchData
 
       const trello = Client(appkey, token)
       const { data } = await trello.get('/members/me/boards')
-      console.log(data)
+
       const boards = (data || []).map(board => {
         return {
           id: board.id,
