@@ -1,0 +1,25 @@
+{
+  "name": "online",
+  "version": "0.0.1",
+  "description": "Online",
+  "main": "dist/index.js",
+  "types": "dist/types/components.d.ts",
+  "module": "dist/esm/index.js",
+  "collection": "dist/collection/collection-manifest.json",
+  "scripts": {
+    "bearer": "bearer",
+    "push": "bearer push",
+    "start": "bearer start",
+    "invoke": "bearer invoke",
+    "generate": "bearer generate"
+  },
+  "dependencies": {
+    "@bearer/functions": "latest",
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "@bearer/cli": "latest",
+    "@types/node": "^10.12.25"
+  },
+  "license": "MIT"
+}
