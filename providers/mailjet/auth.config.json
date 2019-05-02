@@ -1,3 +1,5 @@
 {
-  "authType": "BASIC"
+  "authType": "BASIC",
+  "provider": "Mailjet",
+  "hint": "You will find your Mailjet credentials here: https://app.mailjet.com/account/api_keys"
 }

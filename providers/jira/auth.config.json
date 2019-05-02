@@ -15,5 +15,7 @@
     "callbackURL": "https://int.bearer.sh/v2/auth/callback",
     "response_type": "code",
     "scope": ["read:jira-work"]
-  }
+  },
+  "provider": "Jira",
+  "hint": "You will find your Jira credentials here: https://developer.atlassian.com/apps/create"
 }

@@ -1,3 +1,5 @@
 {
-  "authType": "BASIC"
+  "authType": "BASIC",
+  "provider": "Twilio",
+  "hint": "You will find your Twilio credentials here: https://www.twilio.com/console"
 }

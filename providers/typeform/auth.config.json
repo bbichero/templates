@@ -11,5 +11,7 @@
     "scope": ["forms:read"],
     "callbackURL": "https://int.bearer.sh/v2/auth/callback",
     "response_type": "code"
-  }
+  },
+  "provider": "Typeform",
+  "hint": "You will find your Typeform credentials here: https://admin.typeform.com/account#/section/apps"
 }

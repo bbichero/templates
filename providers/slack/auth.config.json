@@ -13,5 +13,7 @@
     "accessType": "offline",
     "callbackURL": "https://int.bearer.sh/v2/auth/callback",
     "scope": ["reminders:write"]
-  }
+  },
+  "provider": "Slack",
+  "hint": "You will find your Slack credentials here: https://api.slack.com/apps"
 }

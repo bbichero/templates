@@ -1,3 +1,5 @@
 {
-  "authType": "APIKEY"
+  "authType": "APIKEY",
+  "provider": "Pagerduty",
+  "hint": "You will find your Pagerduty credentials here: https://app.pagerduty.com/"
 }

@@ -7,5 +7,7 @@
   "config": {
     "accessType": "offline",
     "scope": ["repo"]
-  }
+  },
+  "provider": "GitHub",
+  "hint": "You will find your GitHub credentials here: https://github.com/settings/developers"
 }

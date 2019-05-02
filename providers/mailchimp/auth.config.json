@@ -1,3 +1,5 @@
 {
-  "authType": "APIKEY"
+  "authType": "APIKEY",
+  "provider": "Mailchimp",
+  "hint": "You will find your Mailchimp credentials here: https://us1.admin.mailchimp.com/account/api/"
 }
