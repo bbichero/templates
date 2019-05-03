@@ -11,5 +11,7 @@
     "callbackURL": "https://int.bearer.sh/v2/auth/callback",
     "response_type": "code",
     "scope": ["https://www.googleapis.com/auth/spreadsheets.readonly"]
-  }
+  },
+  "provider": "Google Sheets",
+  "hint": "You will find your Google Sheets credentials here: https://console.cloud.google.com/apis/credentials"
 }

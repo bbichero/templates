@@ -1,3 +1,5 @@
 {
-  "authType": "APIKEY"
+  "authType": "APIKEY",
+  "provider": "Stripe",
+  "hint": "You will find your Stripe credentials here: https://dashboard.stripe.com/test/dashboard"
 }

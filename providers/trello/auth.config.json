@@ -9,5 +9,7 @@
   "authorizationParams": {},
   "config": {
     "scope": ["read"]
-  }
+  },
+  "provider": "Trello",
+  "hint": "You will find your Trello credentials here: https://trello.com/app-key"
 }

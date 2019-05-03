@@ -11,5 +11,7 @@
     "callbackURL": "https://int.bearer.sh/v2/auth/callback",
     "response_type": "code",
     "scope": ["https://www.googleapis.com/auth/drive.readonly"]
-  }
+  },
+  "provider": "Google Drive",
+  "hint": "You will find your Google Drive credentials here: https://console.cloud.google.com/apis/credentials"
 }
