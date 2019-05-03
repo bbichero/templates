@@ -12,5 +12,7 @@
   },
   "config": {
     "scope": []
-  }
+  },
+  "provider": "Online.net",
+  "hint": "You will find your Online.net credentials here: https://console.online.net/en/api/apps"
 }
